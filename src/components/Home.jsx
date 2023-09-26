@@ -62,7 +62,7 @@ export default function Home() {
 
                 </div>
             </div>
-            <div className="w-full md:w-[75%] lg:w-[50%] max-h-full overflow-y-auto mb-12">
+            <div className="w-full md:w-[75%] lg:w-[50%] max-h-full overflow-y-auto mb-16">
                 <Posts/>
             </div>
             <div className="hidden lg:block w-[25%] bg-red-500">
