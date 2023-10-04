@@ -7,6 +7,7 @@ import { Link, useNavigate } from "react-router-dom";
 import Posts from "./Shared/Posts";
 import { useContext, useState } from "react";
 import { ThemeContext } from "../Contexts/ThemeContext";
+import MobileNav from "./Shared/MobileNav";
 export default function Profile() {
     const navigate=useNavigate();
     const [myprofile,setmyprofile]=useState(false);
@@ -29,10 +30,10 @@ export default function Profile() {
                         
                         {!myprofile ?
                         <div className="p-2 absolute right-2 bottom-5 flex items-center ">
-                            <div className={`border ${border} w-6 h-6 rounded-full mr-3 flex items-center justify-center`}>
+                            <div className={`border-2 ${border} w-6 h-6 rounded-full mr-3 flex items-center justify-center`}>
                                 <BsThreeDots/>
                             </div>
-                            <button className={`border ${border} px-4 text-sm py-1 rounded-full`}>follow</button> 
+                            <button className={`border-2 ${border} px-4 text-sm py-1 rounded-full`}>follow</button> 
                             
                         </div> :
                         <div className="p-2 absolute right-2 bottom-5 flex items-center ">
@@ -68,19 +69,19 @@ export default function Profile() {
                         <Link className="tab">Videos</Link>
                         <Link className="tab">Links</Link>
                     </div>
-                
-                <div className="my-2">
-                    {empty ? 
-                    <div className={`p-4 text-sm ${theme}`}>
-                        <p className="text-2xl font-bold pb-2">No Posts Yet</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam dolor a dolores placeat consequuntur voluptatum ullam minima porro eius, debitis sit! Fugit minima nobis quos adipisci porro eum necessitatibus enim?</p>
-                        <button onClick={()=>setempty(!empty)} className="my-2 px-4 py-2 bg-blue-500 rounded-full text-white">
-                            create posts
-                        </button>
-                    </div> :
-                     <Posts/> 
-                    }
-                </div>
+                    <div className="my-2">
+                        {empty ? 
+                        <div className={`p-4 text-sm ${theme}`}>
+                            <p className="text-2xl font-bold pb-2">No Posts Yet</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam dolor a dolores placeat consequuntur voluptatum ullam minima porro eius, debitis sit! Fugit minima nobis quos adipisci porro eum necessitatibus enim?</p>
+                            <button onClick={()=>setempty(!empty)} className="my-2 px-4 py-2 bg-blue-500 rounded-full text-white">
+                                create posts
+                            </button>
+                        </div> :
+                        <Posts/> 
+                        }
+                    </div>
+                    <MobileNav/>
                 
                 
             </div>

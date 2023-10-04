@@ -4,6 +4,7 @@ import SideNav2 from "./Shared/SideNav2";
 import MainDiv from "./Shared/MainDiv";
 import { useContext } from "react";
 import { ThemeContext } from "../Contexts/ThemeContext";
+import MobileNav from "./Shared/MobileNav";
 export default function Home() {
     const {theme}=useContext(ThemeContext)
   return (
