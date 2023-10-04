@@ -10,7 +10,7 @@ import { ThemeContext } from "../Contexts/ThemeContext";
 export default function Profile() {
     const navigate=useNavigate();
     const [myprofile,setmyprofile]=useState(false);
-    const [empty,setempty]=useState(false)
+    const [empty,setempty]=useState(true)
     const {theme,border,isDark}=useContext(ThemeContext);
   return (
     <div className={`${theme}fixed top-0 left-0 w-full h-full`}>
@@ -71,7 +71,7 @@ export default function Profile() {
                 
                 <div className="my-2">
                     {empty ? 
-                    <div className="p-4 text-sm text-gray-600">
+                    <div className={`p-4 text-sm ${theme}`}>
                         <p className="text-2xl font-bold pb-2">No Posts Yet</p>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam dolor a dolores placeat consequuntur voluptatum ullam minima porro eius, debitis sit! Fugit minima nobis quos adipisci porro eum necessitatibus enim?</p>
                         <button onClick={()=>setempty(!empty)} className="my-2 px-4 py-2 bg-blue-500 rounded-full text-white">
