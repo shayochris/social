@@ -23,7 +23,7 @@ export default function Profile() {
                     </div>
                     <div className="w-full h-52 relative">
                         <div className={`w-full h-36 ${border} ${isDark ? "bg-[#333]":"bg-[#ddd]"}`}>
-                            {/* <img src={rolex} alt="" className="w-full h-full object-cover" /> */}
+                            <img src={rolex} alt="" className="w-full h-full object-cover" />
                         </div>
                         <img src={rolex} alt="" className={`avatar-2xl ring-4 ${isDark ? "ring-black" : "ring-white"} absolute bottom-4 left-4`} />
                         
