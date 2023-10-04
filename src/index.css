@@ -22,3 +22,34 @@
 .navlink-active{
     @apply  w-full p-2 bg-blue-900/80 text-white rounded-lg
 }
+.avatar-xs{
+    @apply w-8 h-8 rounded-full object-cover;
+ }
+.avatar-sm{
+    @apply w-10 h-10 rounded-full object-cover;
+ }
+.stacked{
+    @apply border-2 border-white dark:border-gray-800;
+}
+.avatar-xl{
+    @apply w-20 h-20 rounded-full object-cover;
+ }
+
+.avatar-md{
+    @apply w-12 h-12 rounded-full object-cover;
+}
+.avatar-lg{
+     @apply w-16 h-16 rounded-full object-cover;
+}
+.avatar-xl{
+  @apply w-20 h-20 rounded-full object-cover;
+}
+.avatar-2xl{
+    @apply w-24 h-24 rounded-full object-cover;
+  }
+.tab{
+    @apply inline-block hover:border-b-4 hover:border-blue-500 hover:text-blue-600 py-2 px-2 ;
+}
+.tab-active{
+    @apply inline-block border-b-4 border-blue-500 py-2 px-2;
+}
