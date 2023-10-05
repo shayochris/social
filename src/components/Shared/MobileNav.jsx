@@ -10,7 +10,7 @@ export default function MobileNav() {
   const {theme,border}=useContext(ThemeContext);
   return (
     <div className={`fixed bottom-0 left-0 w-full ${theme} md:hidden`}>
-        <div className={`w-full flex justify-between items-center p-2 border-t ${border}`}>
+        <div className={`w-full flex justify-between items-center py-2 px-4 border-t ${border}`}>
           <Link to="/"><AiOutlineHome className="w-6 h-6"/></Link>
           <Link><MdOutlineNotifications className="w-6 h-6"/></Link>
           <Link><AiOutlineSearch className="w-6 h-6"/></Link>

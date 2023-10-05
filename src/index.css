@@ -2,10 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 .wrapper{
-    @apply fixed top-0 left-0 w-full h-screen flex md:flex-row flex-col overflow-y-scroll scrollbar-hide;
+    @apply fixed top-0 left-0 w-full h-screen flex  overflow-y-scroll scrollbar-hide;
 }
 .main-wrapper{
-    @apply w-full lg:w-[50%] md:w-[70%]  mx-auto overflow-y-scroll scrollbar-hide mb-10 md:mb-2;
+    @apply w-full lg:w-[50%] md:w-[70%] h-[95%]  mx-auto overflow-y-scroll scrollbar-hide;
 }
 .container{
     @apply  w-[90%] sm:w-[80%] md:w-[60%]  mx-auto 
