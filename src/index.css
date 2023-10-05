@@ -5,7 +5,7 @@
     @apply fixed top-0 left-0 w-full h-screen flex  overflow-y-scroll scrollbar-hide;
 }
 .main-wrapper{
-    @apply w-full lg:w-[50%] md:w-[70%] h-[95%]  mx-auto overflow-y-scroll scrollbar-hide;
+    @apply w-full lg:w-[50%] md:w-[70%] h-[95%] md:h-full mx-auto overflow-y-scroll scrollbar-hide;
 }
 .container{
     @apply  w-[90%] sm:w-[80%] md:w-[60%]  mx-auto 
