@@ -12,8 +12,8 @@ export default function SideNav2() {
             <Link className="text-sm">see all</Link>
           </div>
           <div className="p-4">
-          {[...Array(12)].map((n)=>(
-            <div key={n} className={`flex justify-between ${theme} items-start my-3`}>
+          {[...Array(12)].map((n,i)=>(
+            <div key={i} className={`flex justify-between ${theme} items-start my-3`}>
               <div className="flex items-start ">
                 <img src={rolex} alt="" className="avatar-xs mr-2" />
                 <div className="text-sm">

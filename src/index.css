@@ -5,7 +5,7 @@
     @apply fixed top-0 left-0 w-full h-screen flex md:flex-row flex-col overflow-y-scroll scrollbar-hide;
 }
 .main-wrapper{
-    @apply w-full lg:w-[50%] md:w-[70%]  mx-auto overflow-y-scroll scrollbar-hide;
+    @apply w-full lg:w-[50%] md:w-[70%]  mx-auto overflow-y-scroll scrollbar-hide mb-10 md:mb-2;
 }
 .container{
     @apply  w-[90%] sm:w-[80%] md:w-[60%]  mx-auto 
@@ -14,7 +14,7 @@
     @apply w-[80%] sm:w-[50%] md:w-[40%]  mx-auto 
 }
 .input{
-    @apply w-full outline-none border-[2px] border-gray-300 rounded-lg px-4 py-2
+    @apply outline-none border-[1px] rounded-lg px-4 py-1
 }
 .button{
     @apply px-4 py-2 text-white bg-blue-900/80 rounded-lg
