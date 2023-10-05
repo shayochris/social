@@ -4,6 +4,7 @@ import { MdAddCircle, } from "react-icons/md";
 import {MdDarkMode,MdLightMode} from "react-icons/md";
 import { AiOutlineSearch} from "react-icons/ai";
 import { ThemeContext } from "../../Contexts/ThemeContext";
+import MobileNav from './MobileNav';
 
 export default function MainDiv() {
   const {theme,border,isDark,setTheme}=useContext(ThemeContext)
@@ -30,6 +31,7 @@ export default function MainDiv() {
           </div>
         </div> 
         <Posts/>
+        <MobileNav/>
     </div>
   )
 }

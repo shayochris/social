@@ -7,7 +7,6 @@ import MainDiv from "./Shared/MainDiv";
 import { useContext } from "react";
 import { ThemeContext } from "../Contexts/ThemeContext";
 
-import MobileNav from "./Shared/MobileNav";
 
 export default function Home() {
     const {theme,border,isDark,setTheme}=useContext(ThemeContext)
@@ -16,7 +15,7 @@ export default function Home() {
         <SideNav1/>
         <MainDiv/>
         <SideNav2/>
-        <MobileNav/>
+        {/* <MobileNav/> */}
     </div>
   )
 }

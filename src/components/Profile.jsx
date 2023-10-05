@@ -80,10 +80,11 @@ export default function Profile() {
                 </div> :
                 <Posts/> 
                 }
-            </div>  
+            </div>
+            <MobileNav/>  
         </div>
         <SideNav2/>
-        <MobileNav/>
+        
     </div>
   )
 }

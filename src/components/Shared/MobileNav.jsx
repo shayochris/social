@@ -9,7 +9,7 @@ import { BiUserCircle } from "react-icons/bi";
 export default function MobileNav() {
   const {theme,border}=useContext(ThemeContext);
   return (
-    <div className={`fixed bottom-0 left-0 w-full ${theme} md:hidden`}>
+    <div className={`sticky bottom-0 left-0 w-full ${theme} md:hidden`}>
         <div className={`w-full flex justify-between items-center py-2 px-4 border-t ${border}`}>
           <Link to="/"><AiOutlineHome className="w-6 h-6"/></Link>
           <Link><MdOutlineNotifications className="w-6 h-6"/></Link>
