@@ -29,8 +29,11 @@ export default function MainDiv() {
                   }
               </div>
           </div>
+        </div>
+        <div style={{paddingBottom: "40px"}}>
+          <Posts/>
         </div> 
-        <Posts/>
+        
         <MobileNav/>
     </div>
   )
