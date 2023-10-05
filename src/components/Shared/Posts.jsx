@@ -12,7 +12,7 @@ export default function Posts() {
     {
         [...Array(3)].map((n)=>(
         <div key={n} className={`${theme} ${border} p-2 border-b w-full`}>
-            <div className="flex text-sm w-[90%] sm:w-[80%] 2xl:w-[70%] mx-auto">
+            <div className="flex text-sm sm:w-[80%] 2xl:w-[70%] mx-auto">
                 <img src={rolex} alt="" className="avatar-sm mr-2" />
                 <div>
                     <div className='flex items-center'>

@@ -8,13 +8,11 @@ import MobileNav from "./Shared/MobileNav";
 export default function Home() {
     const {theme}=useContext(ThemeContext)
   return (
-
-    <div className={`fixed top-0 left-0  h-screen w-full ${theme}`}>
-        <div className="w-full h-full flex ">
-            <SideNav1/>
-            <MainDiv/>
-            <SideNav2/>
-        </div>
+    <div className={`${theme} wrapper`}>
+        <SideNav1/>
+        <MainDiv/>
+        <SideNav2/>
+        <MobileNav/>
     </div>
   )
 }

@@ -8,7 +8,7 @@ import rolex from "../../assets/images/rolex.jpg";
 export default function MobileNav() {
     const {theme,border}=useContext(ThemeContext);
   return (
-    <div className={`md:hidden sticky w-full p-3 bottom-0 left-0 border-t ${theme} ${border}`}>
+    <div className={`md:hidden w-full p-3 sticky bottom-0 left-0 border-t ${theme} ${border}`}>
         <div className="flex justify-between items-center">
             <Link to="/"><AiFillHome className="w-6 h-6"/></Link>
             <Link><MdNotifications className="w-6 h-6 "/></Link>
