@@ -4,6 +4,7 @@ import NotFound from "./components/NotFound"
 import Signup from "./components/Signup"
 import Profile from "./components/Profile"
 import ThemeContextProvider from "./Contexts/ThemeContext"
+import Comments from "./components/Comments"
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/" element={<Home/>}/>
           <Route path="/signup" element={<Signup/>}/>
           <Route path="/profile" element={<Profile/>}/>
+          <Route path="/comments/:id" element={<Comments/>}/>
           <Route path="*" element={<NotFound/>}/>
           
         </Routes>

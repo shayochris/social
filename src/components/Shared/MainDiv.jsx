@@ -2,14 +2,18 @@ import  { useContext } from 'react'
 import Posts from './Posts'
 import { MdAddCircle, } from "react-icons/md";
 import {MdDarkMode,MdLightMode} from "react-icons/md";
-import { AiOutlineSearch} from "react-icons/ai";
+import { AiOutlineComment, AiOutlineLike, AiOutlineSearch} from "react-icons/ai";
 import { ThemeContext } from "../../Contexts/ThemeContext";
 import MobileNav from './MobileNav';
+import {BiArrowBack} from "react-icons/bi";
+import { Link } from 'react-router-dom';
+import { BsDot } from 'react-icons/bs';
+import rolex from '../../assets/images/rolex.jpg';
 
 export default function MainDiv() {
   const {theme,border,isDark,setTheme}=useContext(ThemeContext)
   return (
-    <div className="main-wrapper">
+    <div className="main-wrapper relative">
        <div className={`p-3  ${theme} sticky top-0 left-0 border-b ${border}`}>
           <div className="flex justify-between items-center">
               <div className={`text-blue-500 `}>

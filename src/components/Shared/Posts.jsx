@@ -33,7 +33,9 @@ export default function Posts() {
                             <AiOutlineLike className= "w-6 h-6"/>1234
                         </span>
                         <span className='mr-4 flex items-center '>
-                            <AiOutlineComment className='w-6 h-6'/>1234
+                            <Link to={`/comments/${i}`} className='flex items-center'>
+                                <AiOutlineComment className='w-6 h-6'/>1234
+                            </Link>
                         </span>
                     </div>
                 </div>
