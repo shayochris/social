@@ -19,30 +19,30 @@ export default function Settings() {
             </div>
             <div className="p-3">
                 <ul>
-                    <li className={`p-2`}>
+                    <li onClick={()=>navigate("/profilesettings")} className={`p-2`}>
                         <div className="flex items-center">
-                            <BiUserCircle className="w-5 h-5 mr-2"/>
+                            <BiUserCircle className="w-8 h-8 mr-2"/>
                             <p className="font-semibold">Profile settings</p>
                         </div>
                         <p className="text-sm text-gray-600">username,email,profile and cover photo</p>
                     </li>
                     <li className={`p-2`}>
                         <div className="flex items-center">
-                            <BiKey className="w-5 h-5 mr-2"/>
+                            <BiKey className="w-8 h-8 mr-2"/>
                             <p className="font-semibold">Password settings</p>
                         </div>
                         <p className="text-sm text-gray-600">change password,save login info</p>
                     </li>
                     <li className={`p-2`}>
                         <div className="flex items-center">
-                            <MdOutlineNotifications className="w-5 h-5 mr-2"/>
+                            <MdOutlineNotifications className="w-8 h-8 mr-2"/>
                             <p className="font-semibold">Notifications</p>
                         </div>
                         <p className="text-sm text-gray-600">set your notifications preferences</p>
                     </li>
                     <li className={`p-2`}>
                         <div className="flex items-center">
-                            <MdOutlineMessage className="w-5 h-5 mr-2"/>
+                            <MdOutlineMessage className="w-8 h-8 mr-2"/>
                             <p className="font-semibold">Message settings</p>
                         </div>
                         <p className="text-sm text-gray-600">who can send you message</p>
@@ -50,7 +50,7 @@ export default function Settings() {
                     <li className={`p-2 flex justify-between items-center`}>
                         <div>
                         <div className="flex items-center">
-                            <MdOutlineColorLens className="w-5 h-5 mr-2"/>
+                            <MdOutlineColorLens className="w-8 h-8 mr-2"/>
                             <p className="font-semibold">Theme Mode</p>
                         </div>
                         <p className="text-sm text-gray-600">currently set to {isDark ? "dark" : "light"}</p>
@@ -61,7 +61,7 @@ export default function Settings() {
                     </li>
                     <li className={`p-2`}>
                         <div className="flex items-center">
-                            <BiExit className="w-5 h-5 mr-2"/>
+                            <BiExit className="w-8 h-8 mr-2"/>
                             <button className="font-semibold">Logout</button>
                         </div>
                     </li>
