@@ -5,6 +5,7 @@ import Signup from "./components/Signup"
 import Profile from "./components/Profile"
 import ThemeContextProvider from "./Contexts/ThemeContext"
 import Comments from "./components/Comments"
+import Settings from "./components/Settings"
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/signup" element={<Signup/>}/>
           <Route path="/profile" element={<Profile/>}/>
           <Route path="/comments/:id" element={<Comments/>}/>
+          <Route path="/settings" element={<Settings/>}/>
           <Route path="*" element={<NotFound/>}/>
           
         </Routes>

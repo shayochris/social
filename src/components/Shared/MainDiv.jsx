@@ -2,7 +2,7 @@ import  { useContext } from 'react'
 import Posts from './Posts'
 import { MdAddCircle, } from "react-icons/md";
 import {MdDarkMode,MdLightMode} from "react-icons/md";
-import { AiOutlineComment, AiOutlineLike, AiOutlineSearch} from "react-icons/ai";
+import { AiOutlineComment, AiOutlineLike, AiOutlineSearch, AiOutlineSetting} from "react-icons/ai";
 import { ThemeContext } from "../../Contexts/ThemeContext";
 import MobileNav from './MobileNav';
 import {BiArrowBack} from "react-icons/bi";
@@ -26,11 +26,8 @@ export default function MainDiv() {
               <div className="flex items-center">
                   <AiOutlineSearch className="w-6 h-6 mr-1 hidden md:block"/>
                   <MdAddCircle className=" w-6 h-6 mr-2 md:hidden text-blue-500"/>
-                  {isDark ?
-                    <MdLightMode onClick={()=>setTheme("light")} className='w-6 h-6'/>
-                  :
-                    <MdDarkMode onClick={()=>setTheme("dark")} className='w-6 h-6'/>
-                  }
+                  <Link to="/settings" className='md:hidden'><AiOutlineSetting className='w-6 h-6'/></Link>
+                  
               </div>
           </div>
         </div>
