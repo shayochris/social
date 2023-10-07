@@ -5,13 +5,20 @@ import SideNav1 from "./Shared/SideNav1";
 import SideNav2 from "./Shared/SideNav2";
 import { BiArrowBack } from "react-icons/bi";
 import defo from "../assets/images/default-profile.jpg"
-import { AiOutlineCamera } from "react-icons/ai";
+import { AiOutlineCamera} from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
+import UsernameModal from "./Modals/UsernameModal";
+import EmailModal from "./Modals/EmailModal";
+import BioModal from "./Modals/BioModal";
 export const ProfileSettings = () => {
-    const {theme,border,isDark}=useContext(ThemeContext);
+    const [username_modal,setusername_modal]=useState(false);
+    const [email_modal,setemail_modal]=useState(false);
+    const [bio_modal,setbio_modal]=useState(false);
+    const {theme,border}=useContext(ThemeContext);
     const navigate=useNavigate();
     const [file, setFile] = useState(null);
     const inputRef = useRef();
+    
 
   useEffect(() => {
     if (file) {
@@ -23,11 +30,14 @@ export const ProfileSettings = () => {
     const selectedFile = inputRef.current.files[0];
     setFile(selectedFile);
   };
-
+    
   return (
     <div className={`${theme} wrapper`}>
+        {username_modal && <UsernameModal setusername_modal={setusername_modal} />}
+        {email_modal && <EmailModal setemail_modal={setemail_modal} />}
+        {bio_modal && <BioModal setbio_modal={setbio_modal}/>}
         <SideNav1/>
-        <div className={`main-wrapper`}>
+        <div className={`main-wrapper `}>
             <div className={`border-b ${theme} ${border} flex items-center p-2`}>
                 <BiArrowBack onClick={()=>navigate(-1)} className="w-5 h-5 mr-2 "/>
                 <p className="text-lg font-semibold">Profile Settings</p>
@@ -59,21 +69,21 @@ export const ProfileSettings = () => {
                     <p className="text-lg font-semibold">username</p>
                     <div className="flex justify-between items-center">
                     <p className="text-sm">username</p>
-                    <button className="text-sm text-blue-500">tap to change</button>
+                    <button onClick={()=>setusername_modal(true)} className="text-sm text-blue-500">tap to change</button>
                     </div>
                 </div>
                 <div className={`border-b ${border} p-3`}>
                     <p className="text-lg font-semibold">email</p>
                     <div className="flex justify-between items-center">
                     <p className="text-sm">user@gmail.com</p>
-                    <button className="text-sm text-blue-500">tap to change</button>
+                    <button onClick={()=>setemail_modal(true)} className="text-sm text-blue-500">tap to change</button>
                     </div>
                 </div>
                 <div className={` p-3`}>
                     <p className="text-lg font-semibold">bio</p>
                     <div className="flex justify-between items-center">
                     <p className="text-sm">Not set</p>
-                    <button className="text-sm text-blue-500">tap to change</button>
+                    <button onClick={()=>setbio_modal(true)} className="text-sm text-blue-500">tap to change</button>
                     </div>
                 </div>
             </div>

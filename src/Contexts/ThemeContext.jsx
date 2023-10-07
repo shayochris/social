@@ -13,8 +13,8 @@ const ThemeContextProvider = ({ children }) => {
             localStorage.setItem("dark","true");
         }
     }
-    const theme=isDark ? "bg-black text-gray-200 " : "bg-white text-gray-700 ";
-    const border=isDark ? "border-gray-600": "border-gray-300";
+    const theme=isDark ? "bg-black text-[#F2F2F2] " : "bg-white text-gray-700 ";
+    const border=isDark ? "border-[#333]": "border-gray-300";
     return (
         <ThemeContext.Provider value={{theme,border,isDark,setTheme}}>
             {children}

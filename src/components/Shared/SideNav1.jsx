@@ -10,40 +10,34 @@ export default function SideNav1() {
   return (
     <div className={`hidden md:block border-r ${theme} ${border} sticky top-0 left-0 w-[30%] h-full`}>
         <div className={` h-full py-2 px-6`}>
-          <p className="pb-2 text-blue-500">Logo</p>
-          <div className="p-2 ">
-            <img src={rolex} alt="" className="avatar-md" />
-            <p>username</p>
-            <p className="text-sm">@username</p>
-          </div>
-          
+          <p className=" text-blue-500 p-2 font-semibold text-xl">Social</p>
           <ul>
             <li className="">
-                <Link to="/" className="hover:text-blue-600 p-2 flex items-center">
+                <Link to="/" className="hover:text-blue-500 p-2 my-2 flex items-center">
                   <span className="mr-2"><AiOutlineHome className="w-6 h-6"/></span>
                   <span className="font-semibold">Home</span>
                 </Link>
             </li>
             <li className="">
-                <Link to="/profile" className="hover:text-blue-600 p-2 flex items-center">
+                <Link to="/profile" className="hover:text-blue-500 p-2 my-2 flex items-center">
                   <span className="mr-2"><BiUserCircle className="w-6 h-6"/></span>
                   <span className="font-semibold">Profile</span>
                 </Link>
             </li>
             <li className="">
-                <Link to="/settings" className="hover:text-blue-600 p-2 flex items-center">
+                <Link to="/settings" className="hover:text-blue-500 p-2 my-2 flex items-center">
                   <span className="mr-2"><AiOutlineSetting className="w-6 h-6"/></span>
                   <span className="font-semibold">Settings</span>
                 </Link>
             </li>
             <li className="">
-                <Link to="/Notifications" className="hover:text-blue-600 p-2 flex items-center">
+                <Link to="/Notifications" className="hover:text-blue-500 p-2 my-2 flex items-center">
                   <span className="mr-2"><MdOutlineNotifications className="w-6 h-6"/></span>
                   <span className="font-semibold">Notifications</span>
                 </Link>
             </li>
             <li className="">
-                <Link to="/Messages" className="hover:text-blue-600 p-2 flex items-center">
+                <Link to="/Messages" className="hover:text-blue-500 p-2 my-2 flex items-center">
                   <span className="mr-2"><MdOutlineMessage className="w-6 h-6"/></span>
                   <span className="font-semibold">Messages</span>
                 </Link>

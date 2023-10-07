@@ -26,7 +26,7 @@ export default function Settings() {
                         </div>
                         <p className="text-sm text-gray-600">username,email,profile and cover photo</p>
                     </li>
-                    <li className={`p-2`}>
+                    <li onClick={()=>navigate("/passwordsettings")} className={`p-2`}>
                         <div className="flex items-center">
                             <BiKey className="w-8 h-8 mr-2"/>
                             <p className="font-semibold">Password settings</p>
@@ -40,7 +40,7 @@ export default function Settings() {
                         </div>
                         <p className="text-sm text-gray-600">set your notifications preferences</p>
                     </li>
-                    <li className={`p-2`}>
+                    <li onClick={()=>navigate("/messagesettings")} className={`p-2`}>
                         <div className="flex items-center">
                             <MdOutlineMessage className="w-8 h-8 mr-2"/>
                             <p className="font-semibold">Message settings</p>

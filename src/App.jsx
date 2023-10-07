@@ -7,6 +7,8 @@ import ThemeContextProvider from "./Contexts/ThemeContext"
 import Comments from "./components/Comments"
 import Settings from "./components/Settings"
 import { ProfileSettings } from "./components/ProfileSettings"
+import PasswordSettings from "./components/PasswordSettings"
+import MessageSettings from "./components/MessageSettings"
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
           <Route path="/comments/:id" element={<Comments/>}/>
           <Route path="/settings" element={<Settings/>}/>
           <Route path="/profilesettings" element={<ProfileSettings/>}/>
+          <Route path="/passwordsettings" element={<PasswordSettings/>}/>
+          <Route path="/messagesettings" element={<MessageSettings/>}/>
           <Route path="*" element={<NotFound/>}/>
           
         </Routes>

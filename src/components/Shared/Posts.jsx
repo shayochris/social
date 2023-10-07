@@ -11,20 +11,24 @@ export default function Posts() {
    <div>
     {
         [...Array(3)].map((n,i)=>(
-        <div key={i} className={`${theme} ${border} p-2 border-b w-full`}>
-            <div className="flex text-sm sm:w-[80%] 2xl:w-[70%] mx-auto">
-                <img src={rolex} alt="" className="avatar-sm mr-2" />
-                <div>
-                    <div className='flex items-center'>
-                        <Link to="/profile">
-                            <p className='font-semibold'>username</p>
-                        </Link>
-                        
-                        <BsDot/>
-                        <p className='text-gray-500 text-xs'>now</p>
-                    </div>
+        <div key={i} className={`${theme} border-b ${border} p-2  w-full`}>
+            <div className='w-[90%] sm:w-[70%] 2xl:w-[60%] mx-auto'>
+                <div className="flex ">
+                    <img src={rolex} alt="" className="avatar-sm mr-2" />
+                    <div>
+                        <div className='flex items-center'>
+                            <Link to="/profile">
+                                <p className='font-semibold'>username</p>
+                            </Link>
+                            <BsDot className='w-4 h-4'/>
+                            <p className='text-gray-500 text-sm'>now</p>
+                        </div>
+                        <p className="text-sm relative bottom-1">@username</p>
+                    </div>  
+                </div>
+                <div className='text-sm'>
                     <p className='pb-2'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam, eius consectetur eaque cumque officia est repellat voluptates reprehenderit aliquid! Eos velit labore dolorem placeat quidem ab, maiores atque aperiam minus?</p>
-                    <div className={`max-h-96 rounded-lg overflow-hidden ${isDark ? "bg-[#333]" :"bg-[#ddd]"}`}>
+                    <div className={`max-h-96 mt-1 rounded-lg overflow-hidden ${isDark ? "bg-[#333]" :"bg-[#ddd]"}`}>
                         <img src={rolex} alt="" className="w-full h-full object-cover" />
                     </div>
                     
