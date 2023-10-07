@@ -15,7 +15,7 @@ export default function MobileNav() {
           <Link><MdOutlineNotifications className="w-6 h-6"/></Link>
           <Link><AiOutlineSearch className="w-6 h-6"/></Link>
           <Link><MdOutlineMessage className="w-6 h-6"/></Link>
-          <Link to="/profile"><BiUserCircle className="w-6 h-6"/></Link>
+          <Link to="/profile/myprofile/*"><BiUserCircle className="w-6 h-6"/></Link>
         </div>
     </div>
   )

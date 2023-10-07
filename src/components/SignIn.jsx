@@ -2,13 +2,11 @@ import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { ThemeContext } from "../Contexts/ThemeContext";
 import { AiOutlineInfoCircle } from "react-icons/ai";
-export default function Signup() {
+export default function Signin() {
     const {theme,border,isDark}=useContext(ThemeContext);
-    const [email,setemail]=useState("");
     const [username,setusername]=useState("");
     const [password,setpassword]=useState("");
     const [usernameerror,setusernameerror]=useState(false);
-    const [emailerror,setemailerror]=useState(false);
     const [passworderror,setpassworderror]=useState(false);
     const [msg,setmsg]=useState("");
     const handleSubmit=(e)=>{
@@ -42,31 +40,9 @@ export default function Signup() {
                     <p className="text-2xl font-semibold mb-2">Welcome to <span  className="text-blue-500">Social</span> </p>
                     <p className="text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus voluptatibus facilis voluptate?</p>
                 </div>
-
-
-                {emailerror ?
-                <div className="relative mb-3 ">
-                    <input type="email" id="floating_filled" className={`${theme} block rounded-lg px-2.5 pb-2.5 pt-4 w-full text-sm    border border-red-500  focus:outline-none focus:ring-0 focus:border-red-500 peer`} placeholder=" " 
-                    value={email } onChange={(e)=>setemail(e.target.value)}
-                    />
-                    <label className="absolute text-sm text-red-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] left-2.5 peer-focus:text-red-500  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4">email</label>
-                    <div className="flex items-center py-1" >
-                        <span><AiOutlineInfoCircle className="w-5 h-5 text-red-500 mr-1"/></span>
-                        <p className="text-sm text-red-500">{msg}</p>
-                    </div>
-                    
-                </div> : 
-                    <div className="relative mb-3 ">
-                        <input type="email" id="floating_filled" className={`${theme} block rounded-lg px-2.5 pb-2.5 pt-4 w-full text-sm    border ${border}  focus:outline-none focus:ring-0 focus:border-blue-600 peer`} placeholder=" " 
-                        value={email } onChange={(e)=>setemail(e.target.value)} autoComplete="off" autoFocus
-                        />
-                        <label className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] left-2.5 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4">email</label>
-                    </div>
-                }
-
                 {usernameerror ?
-                <div className="relative mb-3 ">
-                    <input type="text" id="floating_filled" className={`${theme} block rounded-lg px-2.5 pb-2.5 pt-4 w-full text-sm    border border-red-500  focus:outline-none focus:ring-0 focus:border-red-500 peer`} placeholder=" "
+                <div className="relative mb-2 ">
+                    <input type="text" id="floating_filled" className={`${theme} block rounded-lg px-2.5 pb-2.5 pt-4 w-full text-sm    border border-red-500  focus:outline-none focus:ring-0 focus:border-red-500 peer`} placeholder=" " autoFocus
                     value={username } onChange={(e)=>setusername(e.target.value)}
                     />
                     <label className="absolute text-sm text-red-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] left-2.5 peer-focus:text-red-500  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4">username</label>
@@ -76,8 +52,8 @@ export default function Signup() {
                     </div>
                     
                 </div> : 
-                    <div className="relative mb-3 ">
-                        <input type="text" id="floating_filled" className={`${theme} block rounded-lg px-2.5 pb-2.5 pt-4 w-full text-sm    border ${border}  focus:outline-none focus:ring-0 focus:border-blue-600 peer`} placeholder=" "
+                    <div className="relative mb-2 ">
+                        <input type="text" id="floating_filled" className={`${theme} block rounded-lg px-2.5 pb-2.5 pt-4 w-full text-sm    border ${border}  focus:outline-none focus:ring-0 focus:border-blue-600 peer`} placeholder=" " autoFocus
                         value={username } onChange={(e)=>setusername(e.target.value)} autoComplete="off"
                         />
                         <label className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] left-2.5 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4">username</label>
@@ -86,7 +62,7 @@ export default function Signup() {
 
                 
                 {passworderror ?
-                <div className="relative mb-3 ">
+                <div className="relative mb-2 ">
                     <input type="text" id="floating_filled" className={`${theme} block rounded-lg px-2.5 pb-2.5 pt-4 w-full text-sm    border border-red-500  focus:outline-none focus:ring-0 focus:border-red-500 peer`} placeholder=" " 
                     value={password } onChange={(e)=>setpassword(e.target.value)}
                     />
@@ -97,7 +73,7 @@ export default function Signup() {
                     </div>
                     
                 </div> : 
-                    <div className="relative mb-3 ">
+                    <div className="relative mb-2 ">
                         <input type="text" id="floating_filled" className={`${theme} block rounded-lg px-2.5 pb-2.5 pt-4 w-full text-sm    border ${border}  focus:outline-none focus:ring-0 focus:border-blue-600 peer`} placeholder=" " 
                         value={password } onChange={(e)=>setpassword(e.target.value)} autoComplete="off"
                         />
@@ -105,16 +81,19 @@ export default function Signup() {
                     </div>
                 }
 
-                {username && password && email ?
+                <div className="my-1">
+                    <Link className="text-sm text-blue-600">forgot password?</Link>
+                </div>
+                {username && password ?
                     <div className="my-3">
-                         <button className={`font-semibold rounded-xl p-2 w-full ${isDark ? "bg-white text-black":"bg-blue-500 text-white"}`}>Sign up</button>
+                         <button className={`font-semibold rounded-xl p-2 w-full ${isDark ? "bg-white text-black":"bg-blue-500 text-white"}`}>sign in</button>
                      </div> :
                      <div className="my-3">
-                        <button className={`p-2 font-semibold w-full rounded-xl ${isDark ? "bg-[#333]/60 text-[#eee]/20" :"bg-blue-500/40 text-white"}`} disabled>Sign up</button>
+                        <button className={`p-2 font-semibold w-full rounded-xl ${isDark ? "bg-[#333]/60 text-[#eee]/20" :"bg-blue-500/40 text-white"}`} disabled>sign in</button>
                     </div>
                 }
                 <div className={` text-sm my-2`}>
-                    <p>Already have an account? <Link to="/signin" className="text-blue-500">Sign in</Link></p>
+                    <p>Dont have an account? <Link to="/signup" className="text-blue-500">Sign up</Link></p>
                 </div>
             </form>
         </div>

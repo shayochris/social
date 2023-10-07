@@ -17,7 +17,7 @@ export default function Posts() {
                     <img src={rolex} alt="" className="avatar-sm mr-2" />
                     <div>
                         <div className='flex items-center'>
-                            <Link to="/profile">
+                            <Link to={`/profile/username/${i}`}>
                                 <p className='font-semibold'>username</p>
                             </Link>
                             <BsDot className='w-4 h-4'/>

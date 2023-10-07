@@ -12,7 +12,7 @@ export default function Comments() {
     const {theme,border,isDark}=useContext(ThemeContext);
     const navigate=useNavigate();
     const [comment_modal,setcomment_modal]=useState(false);
-    const [comments,setComments]=useState(false);
+    const [comments,setComments]=useState(true);
   return (
     <div className={`${theme} wrapper`}>
         {comment_modal && <CommentModal setcomment_modal={setcomment_modal}/>}
@@ -26,13 +26,13 @@ export default function Comments() {
                 <button  onClick={()=>setcomment_modal(true)} className={`px-3 py-1 text-sm rounded-full ${isDark ? "bg-white text-black" :" bg-blue-500 text-white"}`}>
                  comment</button>
             </div>
-            {comments && [...Array(10)].map((n,i)=>(
+            {comments ? [...Array(10)].map((n,i)=>(
             <div key={i} className={`${theme} w-full`}>
                 <div className="flex text-sm sm:w-[80%] 2xl:w-[70%] mx-auto p-3">
                     <img src={rolex} alt="" className="avatar-sm mr-2" />
                     <div>
                         <div className='flex items-center'>
-                            <Link to="/profile">
+                            <Link to={`/profile/username/${i}`}>
                                 <p className='font-semibold'>username</p>
                             </Link>
                             
@@ -51,13 +51,15 @@ export default function Comments() {
                     </div>
                 </div>
             </div>
-            ))}
+            )):
+            
             <div className="p-4">
                 <p className="text-xl font-semibold mb-2">No comments yet</p>
                 <p className="text-sm text-gray-500 mb-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam veritatis repellendus accusamus dignissimos iusto non ea modi sint excepturi. Earum voluptatem quae ratione voluptate veniam delectus? Facilis dignissimos obcaecati consequatur.</p>
                 <button  onClick={()=>setComments(true)} className={`px-3 py-1 text-sm rounded-full ${isDark ? "bg-white text-black" :" bg-blue-500 text-white"}`}>
                 show comments</button>
-            </div>
+            </div>}
+            
             
         </div>
         <SideNav2/>

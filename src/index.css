@@ -17,7 +17,7 @@
     @apply outline-none border-[1px] rounded-lg px-4 py-1
 }
 .button{
-    @apply px-4 py-2 text-white bg-blue-900/80 rounded-lg
+    @apply px-4 py-2 text-white  rounded-lg
 }
 .transparent-button{
     @apply px-4 font-semibold py-2 text-blue-900/80 border-[2px] border-blue-900/80 rounded-lg hover:bg-blue-900/80 hover:text-white hover:border-[0px]

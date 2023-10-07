@@ -19,7 +19,7 @@ export default function SideNav1() {
                 </Link>
             </li>
             <li className="">
-                <Link to="/profile" className="hover:text-blue-500 p-2 my-2 flex items-center">
+                <Link to="/profile/myprofile/*" className="hover:text-blue-500 p-2 my-2 flex items-center">
                   <span className="mr-2"><BiUserCircle className="w-6 h-6"/></span>
                   <span className="font-semibold">Profile</span>
                 </Link>

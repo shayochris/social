@@ -59,7 +59,7 @@ export default function Settings() {
                         <MdLightMode onClick={()=>setTheme("light")} className="w-6 h-6"/> :
                         <MdDarkMode onClick={()=>setTheme("dark")} className="w-6 h-6"/>}
                     </li>
-                    <li className={`p-2`}>
+                    <li onClick={()=>navigate("/signin")} className={`p-2`}>
                         <div className="flex items-center">
                             <BiExit className="w-8 h-8 mr-2"/>
                             <button className="font-semibold">Logout</button>
