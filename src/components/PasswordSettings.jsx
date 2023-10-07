@@ -70,7 +70,7 @@ export default function PasswordSettings() {
                         <input type="password"  className={`${theme} block rounded-lg px-2.5 pb-2.5 pt-4 w-full text-sm    border border-red-500  focus:outline-none focus:ring-0 focus:border-red-500 peer`} placeholder=" " autoFocus
                         value={currentpassword } onChange={(e)=>setcurrentpassword(e.target.value)}
                         />
-                        <label className="absolute text-sm text-red-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] left-2.5 peer-focus:text-red-500 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4">current password</label>
+                        <label className="absolute text-sm text-red-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] left-2.5 peer-focus:text-red-500  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4">current password</label>
                         <div className="flex items-center py-1" >
                             <span><AiOutlineInfoCircle className="w-5 h-5 text-red-500 mr-1"/></span>
                             <p className="text-sm text-red-500">{msg}</p>
@@ -89,7 +89,7 @@ export default function PasswordSettings() {
                         <input type="password"  className={`${theme} block rounded-lg px-2.5 pb-2.5 pt-4 w-full text-sm    border border-red-500  focus:outline-none focus:ring-0 focus:border-red-500 peer`} placeholder=" "
                         value={newpassword } onChange={(e)=>setnewpassword(e.target.value)}
                         />
-                        <label className="absolute text-sm text-red-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] left-2.5 peer-focus:text-red-500 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4">new password</label>
+                        <label className="absolute text-sm text-red-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] left-2.5 peer-focus:text-red-500  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4">new password</label>
                         <div className="flex items-center py-1" >
                             <span><AiOutlineInfoCircle className="w-5 h-5 text-red-500 mr-1"/></span>
                             <p className="text-sm text-red-500">{msg}</p>
@@ -108,7 +108,7 @@ export default function PasswordSettings() {
                         <input type="password"  className={`${theme} block rounded-lg px-2.5 pb-2.5 pt-4 w-full text-sm    border border-red-500  focus:outline-none focus:ring-0 focus:border-red-500 peer`} placeholder=" "
                         value={confirmpassword } onChange={(e)=>setconfirmpassword(e.target.value)}
                         />
-                        <label className="absolute text-sm text-red-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] left-2.5 peer-focus:text-red-500 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4">confirm password</label>
+                        <label className="absolute text-sm text-red-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] left-2.5 peer-focus:text-red-500  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4">confirm password</label>
                         <div className="flex items-center py-1" >
                             <span><AiOutlineInfoCircle className="w-5 h-5 text-red-500 mr-1"/></span>
                             <p className="text-sm text-red-500">{msg}</p>
