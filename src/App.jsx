@@ -11,6 +11,10 @@ import PasswordSettings from "./components/PasswordSettings"
 import MessageSettings from "./components/MessageSettings"
 import Signin from "./components/SignIn"
 import Follows from "./components/Follows"
+import Notifications from "./components/Notifiations"
+import Messages from "./components/Messages"
+import Chat from "./components/Chat"
+import Search from "./components/Search"
 
 function App() {
   return (
@@ -23,7 +27,11 @@ function App() {
           <Route path="/signin" element={<Signin/>}/>
           <Route path="/profile/:user/:id" element={<Profile/>}/>
           <Route path="/comments/:id" element={<Comments/>}/>
+          <Route path="/notifications" element={<Notifications/>}/>
+          <Route path="/messages" element={<Messages/>}/>
+          <Route path="/chat" element={<Chat/>}/>
           <Route path="/settings" element={<Settings/>}/>
+          <Route path="/search" element={<Search/>}/>
           <Route path="/profilesettings" element={<ProfileSettings/>}/>
           <Route path="/passwordsettings" element={<PasswordSettings/>}/>
           <Route path="/messagesettings" element={<MessageSettings/>}/>

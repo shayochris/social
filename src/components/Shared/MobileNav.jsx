@@ -12,9 +12,9 @@ export default function MobileNav() {
     <div className={`fixed bottom-0 left-0 w-full ${theme} md:hidden`}>
         <div className={`w-full flex justify-between items-center py-2 px-4 border-t ${border}`}>
           <Link to="/"><AiOutlineHome className="w-6 h-6"/></Link>
-          <Link><MdOutlineNotifications className="w-6 h-6"/></Link>
-          <Link><AiOutlineSearch className="w-6 h-6"/></Link>
-          <Link><MdOutlineMessage className="w-6 h-6"/></Link>
+          <Link to="/notifications"><MdOutlineNotifications className="w-6 h-6"/></Link>
+          <Link to="/search"><AiOutlineSearch className="w-6 h-6"/></Link>
+          <Link to="/messages"><MdOutlineMessage className="w-6 h-6"/></Link>
           <Link to="/profile/myprofile/*"><BiUserCircle className="w-6 h-6"/></Link>
         </div>
     </div>

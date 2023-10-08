@@ -31,13 +31,13 @@ export default function SideNav1() {
                 </Link>
             </li>
             <li className="">
-                <Link to="/Notifications" className="hover:text-blue-500 p-2 my-2 flex items-center">
+                <Link to="/notifications" className="hover:text-blue-500 p-2 my-2 flex items-center">
                   <span className="mr-2"><MdOutlineNotifications className="w-6 h-6"/></span>
                   <span className="font-semibold">Notifications</span>
                 </Link>
             </li>
             <li className="">
-                <Link to="/Messages" className="hover:text-blue-500 p-2 my-2 flex items-center">
+                <Link to="/messages" className="hover:text-blue-500 p-2 my-2 flex items-center">
                   <span className="mr-2"><MdOutlineMessage className="w-6 h-6"/></span>
                   <span className="font-semibold">Messages</span>
                 </Link>
