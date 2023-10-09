@@ -1,9 +1,8 @@
 import { useContext, useState,useRef } from "react"
 import { ThemeContext } from "../../Contexts/ThemeContext"
-import { BsCameraVideo} from "react-icons/bs";
+import { BsCameraVideo, BsCardImage} from "react-icons/bs";
 import defo from "../../assets/images/default-profile.jpg";
 import { AiOutlineClose } from "react-icons/ai";
-import { CiImageOn } from "react-icons/Ci";
 export default function CreatePost({setcreatepost_modal}) {
     const {theme,border}=useContext(ThemeContext);
     const [caption,setCaption]=useState("");
@@ -42,7 +41,7 @@ export default function CreatePost({setcreatepost_modal}) {
                     // onChange={handleFileUpload}
                 />
                 <div className="mt-2 ml-6 flex items-center">
-                    <CiImageOn onClick={() => inputRef.current.click()} className="w-6 h-6 text-blue-500 mr-3"/>
+                    <BsCardImage onClick={() => inputRef.current.click()} className="w-6 h-6 text-blue-500 mr-3"/>
                     <BsCameraVideo onClick={() => inputRef.current.click()} className="w-6 h-6 text-blue-500" disabled/>
                 </div>
                 
