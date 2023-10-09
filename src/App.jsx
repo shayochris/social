@@ -15,13 +15,13 @@ import Notifications from "./components/Notifiations"
 import Messages from "./components/Messages"
 import Chat from "./components/Chat"
 import Search from "./components/Search"
+import Carousel from "./components/Carousel"
 
 function App() {
   return (
     <Router>
       <ThemeContextProvider>
         <Routes>
-          
           <Route path="/" element={<Home/>}/>
           <Route path="/signup" element={<Signup/>}/>
           <Route path="/signin" element={<Signin/>}/>
