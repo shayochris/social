@@ -1,9 +1,8 @@
 import { useContext } from "react"
 import { ThemeContext } from "../../Contexts/ThemeContext"
 import { Link } from "react-router-dom";
-import { AiOutlineHome, AiOutlineSearch} from "react-icons/ai";
+import { AiOutlineHome, AiOutlineSearch, AiOutlineSetting} from "react-icons/ai";
 import { MdOutlineNotifications, MdOutlineMessage } from "react-icons/md";
-import { BiUserCircle } from "react-icons/bi";
 
 
 export default function MobileNav() {
@@ -15,7 +14,7 @@ export default function MobileNav() {
           <Link to="/notifications"><MdOutlineNotifications className="w-6 h-6"/></Link>
           <Link to="/search"><AiOutlineSearch className="w-6 h-6"/></Link>
           <Link to="/messages"><MdOutlineMessage className="w-6 h-6"/></Link>
-          <Link to="/profile/myprofile/*"><BiUserCircle className="w-6 h-6"/></Link>
+          <Link to="/settings" className='md:hidden'><AiOutlineSetting className='w-6 h-6'/></Link>
         </div>
     </div>
   )

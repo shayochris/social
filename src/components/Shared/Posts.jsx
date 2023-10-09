@@ -23,7 +23,7 @@ export default function Posts() {
                             <BsDot className='w-4 h-4'/>
                             <p className='text-gray-500 text-sm'>now</p>
                         </div>
-                        <p className="text-sm relative bottom-1">@username</p>
+                        <p className="text-sm text-gray-500 relative bottom-1">@username</p>
                     </div>  
                 </div>
                 <div className='text-sm'>
